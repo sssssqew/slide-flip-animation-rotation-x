@@ -24,7 +24,7 @@ function initializeStyle(sections){      // 섹션의 기존스타일 초기화 
   for(let i=0; i<sections.length; i++){ 
     const section = sections[i]
     section.style.opacity = '0'
-    section.style.transform = 'translateX(-50%)'
+    section.style.transform = 'translateY(0%)'
     setTimeout(function(){ // 부드러운 화면 전환을 위한 타이머 적용
       section.style.transition = 'none'
     }, 100)
@@ -51,19 +51,19 @@ function changeSlide(e){
       }
       setTimeout(function(){ // 부드러운 화면 전환을 위한 타이머 설정후 초기화 적용하기
         initializeStyle(sections)
-      }, 60)
+      }, 100)
     }
     console.log(index)
     
     // agnle 이 270보다 커질때 화면전환하면 화면이 뚝뚝 끊기면서 갑자기 바뀌므로 40도 정도 여유를 두고 부드럽게 전환되도록 함
     const section = sections[index]
-    if(angle > 230 || angle > 0){   // angle 이 360도에서 0도로 바뀌고 나서 다시 부드럽게 회전할 수 있도록 트랜지션 적용함
+    if(angle > 270 || angle > 0){   // angle 이 360도에서 0도로 바뀌고 나서 다시 부드럽게 회전할 수 있도록 트랜지션 적용함
       setTimeout(function(){        // 슬라이드 flip 후 자연스러운 슬라이드 움직임을 위한 트랜지션 재설정
         section.style.transition = '1s ease-in-out' 
-      }, 50)
+      }, 100)
     } 
     section.style.opacity = '1'
-    section.style.transform = `translateX(-50%) rotateY(${parseInt(angle)}deg)`
+    section.style.transform = `translateY(0%) rotateX(${parseInt(angle)}deg)`
   }
 }
 

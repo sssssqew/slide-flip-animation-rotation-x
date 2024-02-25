@@ -12,8 +12,8 @@ main section{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; left: 50%; right: 0; 
-  top: 0; transform: translateX(-50%);
+  position: fixed; left: 0; right: 0; 
+  top: 50%; transform: translateY(0%);
   transition: 1s ease-in-out;
 }
 main section p{
