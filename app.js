@@ -43,7 +43,7 @@ function changeSlide(e){
       initializeStyle(sections) // angle 이 360도에서 0도로 갑자기 변할때 트랜지션이 적용되어 있어서 슬라이드가 빠르게 돌면서 로테이션되는데 이를 방지하고자 트랜지션을 제거함
     }
 
-    if(Math.abs(angle - 90) < 10){ // 90도 +-10도 근처에서 코드블럭 실행
+    if(Math.abs(angle - 90) < 20){ // 90도 +-10도 근처에서 코드블럭 실행
       angle += 180 // 다음 슬라이드의 위상은 270도부터 시작해야 하므로 180도 증가 (슬라이드 flip)
       index++ // 다음 슬라이드 선택을 위한 인덱스값 증가 
       if(index > sections.length - 1){
