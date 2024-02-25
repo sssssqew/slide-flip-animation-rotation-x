@@ -4,7 +4,7 @@ body{
 }
 main{
   width: 100%;
-  perspective: 5000px;
+  perspective: 5000px; /* 원근감을 줘서 슬라이드가 플립되도록 함 */
 }
 main section{
   width: 100%;
